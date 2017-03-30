@@ -7,7 +7,7 @@ public class Board {
 	public static String annotation;
 	public static String date;
 	public static String ageType;
-	public static String nick;
+	//public static String nick;
 	public static String id_index;
 	public static String viewNo;
 	public static String recommend;
