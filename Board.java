@@ -11,5 +11,4 @@ public class Board {
 	public static String id_index;
 	public static String viewNo;
 	public static String recommend;
-	//바보멍청이들아!!!1111메롱
 }
