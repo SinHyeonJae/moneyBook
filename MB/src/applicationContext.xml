@@ -1,7 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-	
-	
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	<context:component-scan base-package="dao"></context:component-scan>
+
+	<bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"
+		id="dataSource">
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://localhost/moneybook_db"></property>
+		<property name="username" value="root"></property>
+		<property name="password" value="mysql"></property>
+	</bean>
+
+	<bean class="org.mybatis.spring.SqlSessionFactoryBean" id="sqlSessionFactory">
+		<property name="mapperLocations" value="classpath*:mapper/*.xml"></property>
+		<property name="typeAliasesPackage" value="model"></property>
+		<property name="dataSource" ref="dataSource"></property>
+	</bean>
+
+	<bean class="org.mybatis.spring.mapper.MapperFactoryBean" id="moneyBookDao">
+		<!-- <property name="sqlSessionTemplate" ref="sqlSession"></property> -->
+		<property name="sqlSessionFactory" ref="sqlSessionFactory"></property>
+		<property name="mapperInterface" value="dao.IMoneyBookDao"></property>
+	</bean>
+
+
 </beans>
