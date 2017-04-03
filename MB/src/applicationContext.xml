@@ -25,5 +25,4 @@
 		<property name="mapperInterface" value="dao.IMoneyBookDao"></property>
 	</bean>
 
-
 </beans>
