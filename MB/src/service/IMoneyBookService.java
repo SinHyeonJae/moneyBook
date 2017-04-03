@@ -9,7 +9,7 @@ public interface IMoneyBookService {
 	public int totalAmountByCategory(int price, String category, int id_index);
 	public List<MoneyBook> getDayContent(Date date, int id_index);
 	public int totalDayAmount(int price, int id_index);
-	public Date searchDate(Date date);
+	public HashMap<String, Object> searchDate(Date date);
 	public int moneyBookRegist(MoneyBook mb);
 	public int moneyBookSelectOne(int moneyBookNo, int id_index, Date date);
 	public int moneyBookDelete(int moneyBookNo, int id_index);
