@@ -1,19 +1,18 @@
 package dao;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+
+import org.springframework.stereotype.Component;
 
 import model.MoneyBook;
 
 public interface IMoneyBookDao {
-	public int insertMoneyBook(MoneyBook mb);
-	public int updateMoneyBook(String category, String detail,
-								int price, int moneyBookNo, int id_index);			
-	public int deleteMoneyBook(int moneyBookNo, int id_index);
-	public List<MoneyBook> selectByDate(Date date, int id_index);
-	public List<MoneyBook> selectOneMonth(Date date, int id_index);			
-
-
-
+	boolean insertMoneyBook(MoneyBook mb);
+	boolean updateMoneyBook(HashMap<String, Object> params);
+	boolean deleteMoneyBook(HashMap<String, Object> params);
+	List<MoneyBook> selectByDate(HashMap<String, Object> params);
+	List<MoneyBook> selectOneMonth(HashMap<String, Object> params);
 
 }
