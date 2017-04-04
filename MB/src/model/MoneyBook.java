@@ -63,6 +63,5 @@ public class MoneyBook {
 		return "MoneyBook [moneyBookNo=" + moneyBookNo + ", id_index=" + id_index + ", category=" + category
 				+ ", detail=" + detail + ", price=" + price + ", date=" + date + "]";
 	}
-	
 
 }
