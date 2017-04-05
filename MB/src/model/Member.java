@@ -1,7 +1,7 @@
 package model;
 
 public class Member {
-	private String id_index;
+	private int id_index;
 	private String id;
 	private String nick;
 	private String pwd;
