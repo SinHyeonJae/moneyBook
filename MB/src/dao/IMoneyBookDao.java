@@ -9,9 +9,9 @@ import org.springframework.stereotype.Component;
 import model.MoneyBook;
 
 public interface IMoneyBookDao {
-	boolean insertMoneyBook(MoneyBook mb);
-	boolean updateMoneyBook(HashMap<String, Object> params);
-	boolean deleteMoneyBook(HashMap<String, Object> params);
+	int insertMoneyBook(MoneyBook mb);
+	int updateMoneyBook(HashMap<String, Object> params);
+	int deleteMoneyBook(HashMap<String, Object> params);
 	List<MoneyBook> selectByDate(HashMap<String, Object> params);
 	List<MoneyBook> selectOneMonth(HashMap<String, Object> params);
 
