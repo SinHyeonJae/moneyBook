@@ -11,5 +11,6 @@ public interface IMemberDao {
    	public List<Member> selectAllMember();			
    	public Member selectOneMember(int id_index);
    	public int selectIdIndex(String id);
+      public int selectNick(String nick);
 
 }
