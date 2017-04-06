@@ -10,7 +10,7 @@ public interface ICommentService {
 
 	public boolean commentUpdate(HashMap<String, Object> params);
 
-	public boolean checkMyComment(int commentNo, int boardNo, int id_index);
+	public boolean checkMyComment(int commentNo, int id_index);
 
 	public List<HashMap<String, Object>> selectComment(int boardNo);
 }
