@@ -35,14 +35,8 @@ public class CommentService implements ICommentService {
 	}
 
 	@Override
-	public boolean checkMyComment(int commentNo, int boardNo, int id_index) {
-		HashMap<String, Object> params = new HashMap<>();
-		params.put(Comment.BOARDNO, boardNo);
-		params.put(Comment.COMMENTNO, commentNo);
-
-		HashMap<String, Object> result = dao.selectOneComment(params);
-
-		if (result.get(Comment.ID_INDEX).equals(id_index)) {
+	public boolean checkMyComment(int commentId_index, int id_index) {
+		if (commentId_index == id_index) {
 			return true;
 		} else {
 			return false;
