@@ -24,4 +24,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<select id="selectIdIndex" resultType="int" parameterType="String">
 		select id_index from member where id = #{id}
 	</select>
+	<select id="selectNick" resultType="int" parameterType="String">
+		select nick from member WHERE nick = #{nick}
+	</select>
 </mapper>
