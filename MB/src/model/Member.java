@@ -8,10 +8,10 @@ public class Member {
 	public String getId_index() {
 		return id_index;
 	}
-	public void setId_index(String id_index) {
+	public void setId_index(int id_index) {
 		this.id_index = id_index;
 	}
-	public String getId() {
+	public int getId() {
 		return id;
 	}
 	public void setId(String id) {
